@@ -1,12 +1,14 @@
-@extends('master')
+{{--@extends('master') 
 
 @section('content')
+
+--}}
 
     <!-- side bar  -->
 
 
 <!------ Include the above in your HEAD tag ---------->
-<div class="pull-right">
+{{-- <div class="pull-right">
     <div class="btn-group">
         <button class="btn btn-info" id="list">
             List View
@@ -22,9 +24,9 @@
 
         
     </div>
-</div>
+</div> --}}
     
-            
+{{--             
 <div class="wrapper">
          <!-- -->
          <!-- -->
@@ -100,21 +102,134 @@
     </div>
         <!-- -->
      
-</div>
+</div> --}}
    
+  <!--css link -->
+<link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="navigation container">
+        <div class="logo">
+            <h1>CBF</h1>
+        </div>
+
+        <div class="menu">
+            <div class="top-nav">
+                <div class="logo">
+                    <h1>CBF</h1>
+                </div>
+                <div class="close">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="product.html" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="account.html" class="nav-link">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <a href="cart.html" class="cart-icon">
+            <i class="bx bx-shopping-bag"></i>
+        </a>
+
+        <div class="hamburger">
+            <i class="bx bx-menu"></i>
+        </div>
+    </div>
+</nav>
+  
+   <!-- All Products -->
+   <section class="section all-products" id="products">
+    <div class="top container">
+
+        <h1>All Products</h1>
+  @foreach ($products as $item)
+
+        {{-- <form>
+            <select>
+                <option value="1">Defualt Sorting</option>
+                <option value="2">Sort By Price</option>
+                <option value="3">Sort By Popularity</option>
+                <option value="4">Sort By Sale</option>
+                <option value="5">Sort By Rating</option>
+            </select>
+            <span><i class='bx bx-chevron-down'></i></span>
+        </form> --}}
+    </div>
+
+    <div class="product-center container">
+        <div class="product">
+            <div class="product-header">
+                <img src="./images/pic1.jpg" alt="">
+                <ul class="icons">
+                    <span><i class="bx bx-heart"></i></span>
+                    <a href="cart.html"> <span><i class="bx bx-shopping-bag"></i></span>
+                    </a>
+                    <span><i class="bx bx-search"></i></span>
+                </ul>
+            </div>
+            <div class="product-footer">
+                <a href="product-details.html">
+                    <h3>{{$item['name']}}</h3>
+                </a>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <h4 class="price">{{$item['price']}}</h4>
+            </div>
+        </div>
         
+       
+        
+    </div>
+    @endforeach
+
+</section>
+
+{{-- <section class="pagination">
+    <div class=" container">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span><i class='bx bx-right-arrow-alt'></i></span>
+    </div>
+</section> --}}
 
 
 
-@endsection
+{{-- @endsection --}}
 
 
 
-<script>
+{{-- <script>
     $(document).ready(function(){
         $("#sidebarCollapse").on('click',function(){
             $("#sidebar").toggleClass('active');
         })
     })
-</script>
+</script> --}}
 

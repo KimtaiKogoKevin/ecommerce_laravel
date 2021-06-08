@@ -8,9 +8,73 @@ if(Session::has('user'))
 }
 ?>
 
-<!--
 
-  
+  <!-- Header -->
+  <header id="home" class="header">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="navigation container">
+        <div class="logo">
+          <h1>CBF</h1>
+        </div>
+
+        <div class="menu">
+          <div class="top-nav">
+            <div class="logo">
+              <h1>CBF</h1>
+            </div>
+            <div class="close">
+              <i class="bx bx-x"></i>
+            </div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link scroll-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/shop" class="nav-link">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link scroll-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link scroll-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#account" class="nav-link scroll-link">Account</a>
+            </li>
+            <li class="nav-item">
+              <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="cart.html" class="cart-icon">
+          <i class="bx bx-shopping-bag"></i>
+        </a>
+
+        <div class="hamburger">
+          <i class="bx bx-menu"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <img src="./images/banner.png" alt="" class="hero-img" />
+
+    <div class="hero-content">
+      <h2><span class="discount">70% </span> SALE OFF</h2>
+      <h1>
+        <span>Summer Vibes</span>
+        <span>mode on</span>
+      </h1>
+      <a class="btn" href="#">shop now</a>
+    </div>
+  </header>
+
+
+  <!--
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
   
@@ -73,8 +137,9 @@ if(Session::has('user'))
 </nav>
 -->
 
-<header>
-  <div class="container">
+{{-- <header>
+
+   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-12 col-12 ">
         <div class="dropdown-meu">
@@ -163,8 +228,8 @@ if(Session::has('user'))
       </div>
     </nav>
 
-  </div>
-</header>
+  </div> 
+</header> --}}
 
 
 <!-- header -->

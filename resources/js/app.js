@@ -1,3 +1,3 @@
 require('./bootstrap');
-require('slick-carousel');
+//require('slick-carousel');
 
